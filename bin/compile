@@ -12,7 +12,7 @@ unset GIT_DIR
 
 # config
 STUNNEL_VERSION="4.56"
-S3_BUCKET="gregburek-buildpack-pgbouncer"
+STUNNEL_GITHUB_REPO="davegwilt/heroku-buildpack-python-libraries/numpy"
 
 # parse and derive params
 BUILD_DIR=$1
@@ -31,7 +31,7 @@ VENDORED_STUNNEL="vendor/stunnel"
 PATH="$BUILD_DIR/$VENDORED_STUNNEL/bin:$PATH"
 echo "-----> Fetching and vendoring stunnel into slug"
 mkdir -p "$BUILD_DIR/$VENDORED_STUNNEL/var/run/stunnel/"
-package_download "stunnel" "${STUNNEL_VERSION}" "${BUILD_DIR}/${VENDORED_STUNNEL}"
+package_download "stunnel" "${STUNNEL_VERSION}" "${STUNNEL_GITHUB_REPO}" "${BUILD_DIR}/${VENDORED_STUNNEL}"
 
 
 echo "-----> Skipping the startup script"

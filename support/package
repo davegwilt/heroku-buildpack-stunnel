@@ -14,9 +14,10 @@ function indent() {
 function package_download() {
   engine="$1"
   version="$2"
-  location="$3"
+  repo="$3"
+  location="$4"
 
   mkdir -p $location
-  package="https://${S3_BUCKET}.s3.amazonaws.com/$engine-$version.tgz"
+  package="https://raw.githubusercontent.com/$repo/$engine-$version.tgz"
   curl $package -s -o - | tar xzf - -C $location
 }
