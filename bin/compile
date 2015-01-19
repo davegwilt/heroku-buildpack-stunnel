@@ -33,9 +33,3 @@ echo "-----> Fetching and vendoring stunnel into slug"
 mkdir -p "$BUILD_DIR/$VENDORED_STUNNEL/var/run/stunnel/"
 package_download "stunnel" "${STUNNEL_VERSION}" "${STUNNEL_GITHUB_REPO}" "${BUILD_DIR}/${VENDORED_STUNNEL}"
 
-
-echo "-----> Skipping the startup script"
-echo "!      WARNING: This buildpack no longer generates a startup script."
-echo "!               The stunnel binary will be available at /app/vendor/stunnel/bin/stunnel."
-echo "!               Startup stunnel within your app using .profile or some other mechanism."
-echo "-----> stunnel done"
