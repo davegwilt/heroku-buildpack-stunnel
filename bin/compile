@@ -30,5 +30,5 @@ VENDORED_STUNNEL="vendor/stunnel"
 PATH="$BUILD_DIR/$VENDORED_STUNNEL/bin:$PATH"
 echo "-----> Fetching and vendoring stunnel into slug"
 mkdir -p "$BUILD_DIR/$VENDORED_STUNNEL/var/run/stunnel/"
-tar xzf "${LP-DIR}/support_files/stunnel-${STUNNEL_VERSION}.tgz" -C "${BUILD_DIR}/${VENDORED_STUNNEL}"
+tar xzf "${LP_DIR}/support_files/stunnel-${STUNNEL_VERSION}.tgz" -C "${BUILD_DIR}/${VENDORED_STUNNEL}"
 
