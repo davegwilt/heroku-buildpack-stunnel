@@ -14,7 +14,7 @@ LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 echo "-----> Fetching and vendoring stunnel into slug"
 VENDORED_STUNNEL="vendor/stunnel"
-PATH="$BUILD_DIR/$VENDORED_STUNNEL/bin:$PATH"
+export PATH="$BUILD_DIR/$VENDORED_STUNNEL/bin:$PATH"
 mkdir -p "$BUILD_DIR/$VENDORED_STUNNEL"
 tar -xzf "$LP_DIR/support_files/stunnel4_4.53-1.1ubuntu1_amd64.tgz" -C "$BUILD_DIR/$VENDORED_STUNNEL"
 
